@@ -1,0 +1,93 @@
+/* img {
+    width: 5%;
+} */
+
+.menu-desktop {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-options,
+.form-button {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-button {
+    margin-left: 450px;
+}
+
+.button-menu {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 9px 7px 0px 7px;
+    margin: 20px 0px 20px 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.option {
+    padding: 30px 8px 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.option:hover {
+    color: rgb(87, 238, 238);
+}
+
+/* --.form-search----- */
+.menu-search {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+}
+
+.input-select{
+padding: 11px 4px;
+width: 20%;
+margin-left:10px ;
+font-size: 15px;
+border-radius: 5px;
+border: 1px solid black;
+}
+.form-search{
+    width: 100%;
+}
+.input-submit{
+    width: 7%;
+    margin-left: 15px;
+    padding: 11px 4px;
+    border-radius:5px ;
+}
+.setting-right-menu{
+    padding-top: 20px;
+    font-size: 30px;
+     margin-left: 10px;
+     border: none;
+     background-color: white;
+}
+.right-login{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 380px;
+}
+.name-user{
+    font-size: 15px;
+    font-weight: bold;
+    /* padding-top: 20px; */
+    margin-left: 10px;
+}
+.setting-right-user{
+    padding-top: 25px;
+    font-size: 30px;
+     margin-left: 10px;
+     border: none;
+     background-color: white;
+     /* border: 1px solid black;
+     border-radius: 5px; */
+}
+/* .setting-right-user:hover{
+    border: 1px solid black;
+    border-radius: 5px;
+} */
