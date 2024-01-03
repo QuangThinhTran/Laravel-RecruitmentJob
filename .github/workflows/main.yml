@@ -57,7 +57,7 @@ jobs:
       - name: Create test database
         run: |
           php artisan config:clear
-          php artisan migrate -v --database=mysql --env=testing
+          php artisan migrate -v --database=testing --env=testing
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
 
