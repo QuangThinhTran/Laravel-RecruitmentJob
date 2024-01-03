@@ -63,7 +63,6 @@ jobs:
 
       - name: Run unit-test via PHPUnit
         env:
-          DB_CONNECTION: mysql
           DB_DATABASE: testing
           DB_USERNAME: root
           DB_PASSWORD: password
