@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DB_DATABASE: laravel
+      DB_DATABASE: testing
       DB_USERNAME: root
       DB_PASSWORD: password
     services:
@@ -20,7 +20,7 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: false
           MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: laravel
+          MYSQL_DATABASE: testing
         ports:
           - 3306:3306
 
@@ -56,7 +56,7 @@ jobs:
 
       - name: Create test database
         run: |
-          php artisan config:clear
+          php artisan optimize:clear
           php artisan migrate -v --database=testing --env=testing
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
@@ -72,10 +72,10 @@ jobs:
       - name: Send email notification
         uses: dawidd6/action-send-mail@v3
         with:
-            server_address: smtp.gmail.com
+            server_address: sandbox.smtp.mailtrap.io
             server_port: 465
-            username: ${{ secrets.MAIL_USERNAME }}
-            password: ${{ secrets.MAIL_PASSWORD }}
+            username: 9ea3a6b46d9d12
+            password: 4b0d6606edbb0e
             subject: GitHub Actions result
             to: tranlequangthinh24122002@gmail.com
             from: Your Name <your-email@gmail.com>
