@@ -54,13 +54,6 @@ jobs:
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
 
-      # - name: Create test database
-      #   run: |
-      #     php artisan optimize:clear
-      #     php artisan migrate -v --database=testing --env=testing
-      #   env:
-      #     DB_PORT: ${{ job.services.mysql.ports['3306'] }}
-
       - name: Run unit-test via PHPUnit
         env:
           DB_DATABASE: testing
