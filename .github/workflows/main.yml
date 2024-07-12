@@ -68,3 +68,17 @@ jobs:
           DB_PASSWORD: password
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
         run: vendor/bin/phpunit
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+            server_address: smtp.gmail.com
+            server_port: 465
+            username: ${{ secrets.MAIL_USERNAME }}
+            password: ${{ secrets.MAIL_PASSWORD }}
+            subject: GitHub Actions result
+            to: tranlequangthinh24122002@gmail.com
+            from: Your Name <your-email@gmail.com>
+            body: |
+              The workflow has completed. Check the details at ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        if: always()
